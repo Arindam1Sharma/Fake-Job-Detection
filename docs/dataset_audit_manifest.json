@@ -1,0 +1,37 @@
+{
+  "primary_training_dataset": {
+    "file": "fake_job_core_clean.csv",
+    "rows": 15870,
+    "label_counts": {
+      "0": 15159,
+      "1": 711
+    },
+    "purpose": "Primary supervised fraud-detection dataset",
+    "note": "Deduplicated identical content to reduce leakage. Original labels were non-conflicting across duplicate content."
+  },
+  "secondary_labeled_text": {
+    "file": "secondary_labeled_text_nonoverlap.csv",
+    "rows": 12974,
+    "label_counts": {
+      "0": 12463,
+      "1": 511
+    },
+    "purpose": "Supplementary labeled text set; keep provenance separate from the primary dataset",
+    "note": "Exact description overlaps with the primary dataset were removed."
+  },
+  "internship_dataset": {
+    "file": "internship_scam_supplementary.csv",
+    "rows": 900,
+    "purpose": "Specialized internship-scam analysis / robustness test",
+    "note": "Do not merge into primary training because it substantially overlaps the primary source."
+  },
+  "modern_unlabeled": {
+    "file": "modern_remote_jobs_unlabeled.csv",
+    "rows": 50,
+    "purpose": "Modern vocabulary / sanity-check dataset",
+    "note": "No fraud labels; do not treat these jobs as automatically legitimate."
+  },
+  "excluded": [
+    "Unconfirmed 456449.crdownload \u2014 incomplete download; not used."
+  ]
+}

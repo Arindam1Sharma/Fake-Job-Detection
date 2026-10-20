@@ -1,0 +1,35 @@
+﻿# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Datasets - keep local
+data/raw/*
+data/processed/*
+data/external/*
+
+# Model files - avoid uploading large artifacts
+models/*
+!models/.gitkeep
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore dataset files stored directly in data/
+data/*.csv
+data/*.json
